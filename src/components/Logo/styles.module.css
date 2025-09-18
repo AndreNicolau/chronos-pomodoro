@@ -1,7 +1,7 @@
 .logo {
   gap: 2.4rem;
   display: flex;
-  padding: 3.2rem;
+  padding-top: 3.2rem;
   align-items: center;
   justify-content: center;
 }
