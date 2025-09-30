@@ -10,10 +10,21 @@ import { Menu } from './components/Menu';
 import './styles/global.css';
 import './styles/theme.css';
 import { Footer } from './components/Footer';
+import { Heading } from './components/Heading';
 
 export function App() {
+  let numero = 0;
+
+  function handleClick() {
+    numero++;
+    console.log(numero, Date.now());
+  }
+
   return (
     <>
+      <Heading>Numero: {numero}</Heading>
+      <button onClick={handleClick}>Aumenta</button>
+
       <Container>
         <Logo />
       </Container>
@@ -32,7 +43,7 @@ export function App() {
             <DefaultInput
               type='text'
               id='meuInput'
-              labelText='Task'
+              labelText={numero.toString()}
               placeholder='Insira algo'
             />
           </div>
