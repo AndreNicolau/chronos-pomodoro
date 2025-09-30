@@ -11,7 +11,14 @@ export function Menu() {
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) {
     event.preventDefault();
-    console.log('Click', Date.now());
+    console.log(theme, Date.now());
+
+    setTheme((prevTheme) => {
+      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+      return nextTheme;
+    });
+
+    // document.documentElement.setAttribute('data-theme', theme);
   }
 
   return (
