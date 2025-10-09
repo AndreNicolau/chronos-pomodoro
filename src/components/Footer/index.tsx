@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 export function Footer() {
   return (
@@ -6,5 +6,5 @@ export function Footer() {
       <a> Entenda como funciona a técnica Pomodoro.</a>
       <a> Chronos Pomodoro &copy; {new Date().getFullYear()} - Feito com 💚</a>
     </footer>
-  )
+  );
 }

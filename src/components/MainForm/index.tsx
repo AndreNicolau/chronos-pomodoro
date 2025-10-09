@@ -1,7 +1,7 @@
-import { PlayCircleIcon } from 'lucide-react'
-import { Cycles } from '../Cycles'
-import { DefaultButton } from '../DefaultButton'
-import { DefaultInput } from '../DefaultInput'
+import { PlayCircleIcon } from 'lucide-react';
+import { Cycles } from '../Cycles';
+import { DefaultButton } from '../DefaultButton';
+import { DefaultInput } from '../DefaultInput';
 
 export function MainForm() {
   function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {}
@@ -29,5 +29,5 @@ export function MainForm() {
         <DefaultButton icon={<PlayCircleIcon />} />
       </div>
     </form>
-  )
+  );
 }

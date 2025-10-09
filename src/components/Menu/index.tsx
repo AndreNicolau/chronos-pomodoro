@@ -4,39 +4,39 @@ import {
   MoonIcon,
   Settings2Icon,
   SunIcon,
-} from 'lucide-react'
-import { useEffect, useState } from 'react'
-import styles from './styles.module.css'
+} from 'lucide-react';
+import { useEffect, useState } from 'react';
+import styles from './styles.module.css';
 
-type AvailableThemes = 'dark' | 'light'
+type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
   const [theme, setTheme] = useState<AvailableThemes>(() => {
     const storageTheme =
-      (localStorage.getItem('theme') as AvailableThemes) || 'dark'
-    return storageTheme
-  })
+      (localStorage.getItem('theme') as AvailableThemes) || 'dark';
+    return storageTheme;
+  });
 
   const nextThemeIcon = {
     dark: <SunIcon />,
     light: <MoonIcon />,
-  }
+  };
 
   function handleThemeChange(
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) {
-    event.preventDefault()
+    event.preventDefault();
 
     setTheme((prevTheme) => {
-      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark'
-      return nextTheme
-    })
+      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+      return nextTheme;
+    });
   }
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
-  }, [theme])
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
     <nav className={styles.menu}>
@@ -74,5 +74,5 @@ export function Menu() {
         {nextThemeIcon[theme]}
       </a>
     </nav>
-  )
+  );
 }

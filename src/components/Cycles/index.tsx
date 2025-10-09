@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 export function Cycles() {
   return (
@@ -16,5 +16,5 @@ export function Cycles() {
         <span className={`${styles.cycleDot} ${styles.longBreakTime}`}></span>
       </div>
     </div>
-  )
+  );
 }

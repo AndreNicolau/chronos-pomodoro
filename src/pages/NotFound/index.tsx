@@ -1,7 +1,7 @@
-import { Container } from '../../components/Container'
-import { GenericHtml } from '../../components/GenericHtml'
-import { Heading } from '../../components/Heading'
-import { MainTemplate } from '../../components/templates/MainTemplate'
+import { Container } from '../../components/Container';
+import { GenericHtml } from '../../components/GenericHtml';
+import { Heading } from '../../components/Heading';
+import { MainTemplate } from '../../components/templates/MainTemplate';
 
 export function NotFound() {
   return (
@@ -33,5 +33,5 @@ export function NotFound() {
         </GenericHtml>
       </Container>
     </MainTemplate>
-  )
+  );
 }
